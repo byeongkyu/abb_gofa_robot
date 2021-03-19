@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<robot name="abb_gofa.crb15000" xmlns:xacro="http://www.ros.org/wiki/xacro">
+    <xacro:include filename="$(find abb_gofa_description)/urdf/abb_gofa.crb15000.urdf.xacro"/>
+
+    <link name="world"/>
+
+    <xacro:insert_abb_gofa_crb15000 parent="world" prefix="">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+    </xacro:insert_abb_gofa_crb15000>
+</robot>
