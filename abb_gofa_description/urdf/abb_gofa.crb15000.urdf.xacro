@@ -7,14 +7,14 @@
             <visual>
                 <origin xyz="0 0 0" rpy="0 0 0"/>
                 <geometry>
-                    <mesh filename="package://abb_gofa_description/meshes/base.dae" scale="1 1 1"/>
+                    <mesh filename="file://$(find abb_gofa_description)/meshes/base.dae" scale="1 1 1"/>
                 </geometry>
             </visual>
 
             <collision>
                 <origin xyz="0 0 0" rpy="0 0 0"/>
                 <geometry>
-                    <mesh filename="package://abb_gofa_description/meshes/base.dae" scale="1 1 1"/>
+                    <mesh filename="file://$(find abb_gofa_description)/meshes/base.dae" scale="1 1 1"/>
                 </geometry>
             </collision>
 
@@ -37,14 +37,14 @@
             <visual>
                 <origin xyz="0 0 0" rpy="0 0 0"/>
                 <geometry>
-                    <mesh filename="package://abb_gofa_description/meshes/link1.dae" scale="1 1 1"/>
+                    <mesh filename="file://$(find abb_gofa_description)/meshes/link1.dae" scale="1 1 1"/>
                 </geometry>
             </visual>
 
             <collision>
                 <origin xyz="0 0 0" rpy="0 0 0"/>
                 <geometry>
-                    <mesh filename="package://abb_gofa_description/meshes/link1.dae" scale="1 1 1"/>
+                    <mesh filename="file://$(find abb_gofa_description)/meshes/link1.dae" scale="1 1 1"/>
                 </geometry>
             </collision>
 
@@ -69,14 +69,14 @@
             <visual>
                 <origin xyz="0 0 0" rpy="0 0 0"/>
                 <geometry>
-                    <mesh filename="package://abb_gofa_description/meshes/link2.dae" scale="1 1 1"/>
+                    <mesh filename="file://$(find abb_gofa_description)/meshes/link2.dae" scale="1 1 1"/>
                 </geometry>
             </visual>
 
             <collision>
                 <origin xyz="0 0 0" rpy="0 0 0"/>
                 <geometry>
-                    <mesh filename="package://abb_gofa_description/meshes/link2.dae" scale="1 1 1"/>
+                    <mesh filename="file://$(find abb_gofa_description)/meshes/link2.dae" scale="1 1 1"/>
                 </geometry>
             </collision>
 
@@ -101,14 +101,14 @@
             <visual>
                 <origin xyz="0 0 0" rpy="0 0 0"/>
                 <geometry>
-                    <mesh filename="package://abb_gofa_description/meshes/link3.dae" scale="1 1 1"/>
+                    <mesh filename="file://$(find abb_gofa_description)/meshes/link3.dae" scale="1 1 1"/>
                 </geometry>
             </visual>
 
             <collision>
                 <origin xyz="0 0 0" rpy="0 0 0"/>
                 <geometry>
-                    <mesh filename="package://abb_gofa_description/meshes/link3.dae" scale="1 1 1"/>
+                    <mesh filename="file://$(find abb_gofa_description)/meshes/link3.dae" scale="1 1 1"/>
                 </geometry>
             </collision>
 
@@ -133,14 +133,14 @@
             <visual>
                 <origin xyz="0 0 0" rpy="0 0 0"/>
                 <geometry>
-                    <mesh filename="package://abb_gofa_description/meshes/link4.dae" scale="1 1 1"/>
+                    <mesh filename="file://$(find abb_gofa_description)/meshes/link4.dae" scale="1 1 1"/>
                 </geometry>
             </visual>
 
             <collision>
                 <origin xyz="0 0 0" rpy="0 0 0"/>
                 <geometry>
-                    <mesh filename="package://abb_gofa_description/meshes/link4.dae" scale="1 1 1"/>
+                    <mesh filename="file://$(find abb_gofa_description)/meshes/link4.dae" scale="1 1 1"/>
                 </geometry>
             </collision>
 
@@ -165,14 +165,14 @@
             <visual>
                 <origin xyz="0 0 0" rpy="0 0 0"/>
                 <geometry>
-                    <mesh filename="package://abb_gofa_description/meshes/link5.dae" scale="1 1 1"/>
+                    <mesh filename="file://$(find abb_gofa_description)/meshes/link5.dae" scale="1 1 1"/>
                 </geometry>
             </visual>
 
             <collision>
                 <origin xyz="0 0 0" rpy="0 0 0"/>
                 <geometry>
-                    <mesh filename="package://abb_gofa_description/meshes/link5.dae" scale="1 1 1"/>
+                    <mesh filename="file://$(find abb_gofa_description)/meshes/link5.dae" scale="1 1 1"/>
                 </geometry>
             </collision>
 
@@ -197,14 +197,14 @@
             <visual>
                 <origin xyz="0 0 0" rpy="0 0 0"/>
                 <geometry>
-                    <mesh filename="package://abb_gofa_description/meshes/link6.dae" scale="1 1 1"/>
+                    <mesh filename="file://$(find abb_gofa_description)/meshes/link6.dae" scale="1 1 1"/>
                 </geometry>
             </visual>
 
             <collision>
                 <origin xyz="0 0 0" rpy="0 0 0"/>
                 <geometry>
-                    <mesh filename="package://abb_gofa_description/meshes/link6.dae" scale="1 1 1"/>
+                    <mesh filename="file://$(find abb_gofa_description)/meshes/link6.dae" scale="1 1 1"/>
                 </geometry>
             </collision>
 

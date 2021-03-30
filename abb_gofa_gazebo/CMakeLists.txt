@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.5)
-project(abb_gofa_description)
+project(abb_gofa_gazebo)
 
 # Default to C99
 if(NOT CMAKE_C_STANDARD)
@@ -17,13 +17,10 @@ endif()
 
 # find dependencies
 find_package(ament_cmake REQUIRED)
-find_package(xacro REQUIRED)
-find_package(rclpy REQUIRED)
+find_package(gazebo_ros REQUIRED)
 
 install(
   DIRECTORY
-    meshes
-    urdf
     launch
   DESTINATION share/${PROJECT_NAME}
 )
