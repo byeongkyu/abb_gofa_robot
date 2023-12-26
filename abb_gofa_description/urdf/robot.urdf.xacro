@@ -1,10 +1,17 @@
 <?xml version="1.0"?>
 <robot name="abb_gofa.crb15000" xmlns:xacro="http://www.ros.org/wiki/xacro">
     <xacro:include filename="$(find abb_gofa_description)/urdf/abb_gofa.crb15000.urdf.xacro"/>
+    <xacro:include filename="$(find abb_gofa_description)/urdf/abb_gofa.crb15000_ros2_control.urdf.xacro"/>
+    <xacro:include filename="$(find abb_gofa_description)/urdf/abb_gofa.crb15000_gazebo.urdf.xacro"/>
+
+    <xacro:arg name="tf_prefix" default="" />
 
     <link name="world"/>
 
-    <xacro:insert_abb_gofa_crb15000 parent="world" prefix="">
+    <xacro:insert_robot parent="world" prefix="$(arg tf_prefix)">
         <origin xyz="0 0 0" rpy="0 0 0"/>
-    </xacro:insert_abb_gofa_crb15000>
+    </xacro:insert_robot>
+
+    <xacro:insert_ros2_control name="abb_gofa.crb15000" prefix="$(arg tf_prefix)"/>
+    <xacro:insert_gazebo prefix="$(arg tf_prefix)"/>
 </robot>

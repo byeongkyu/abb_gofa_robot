@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+    <xacro:macro name="insert_ros2_control" params="name prefix">
+        <ros2_control name="${name}" type="system">
+            <hardware>
+                <plugin>ign_ros2_control/IgnitionSystem</plugin>
+            </hardware>
+
+            <joint name="${prefix}axis1_rotation">
+                <command_interface name="position">
+                    <param name="min">${-180*pi/180}</param>
+                    <param name="max">${180*pi/180}</param>
+                </command_interface>
+
+                <state_interface name="position"/>
+                <state_interface name="velocity"/>
+                <state_interface name="effort"/>
+            </joint>
+
+            <joint name="${prefix}axis2_arm">
+                <command_interface name="position">
+                    <param name="min">${-180*pi/180}</param>
+                    <param name="max">${180*pi/180}</param>
+                </command_interface>
+
+                <state_interface name="position"/>
+                <state_interface name="velocity"/>
+                <state_interface name="effort"/>
+            </joint>
+
+            <joint name="${prefix}axis3_arm">
+                <command_interface name="position">
+                    <param name="min">${-225*pi/180}</param>
+                    <param name="max">${85*pi/180}</param>
+                </command_interface>
+
+                <state_interface name="position"/>
+                <state_interface name="velocity"/>
+                <state_interface name="effort"/>
+            </joint>
+
+            <joint name="${prefix}axis4_wrist">
+                <command_interface name="position">
+                    <param name="min">${-180*pi/180}</param>
+                    <param name="max">${180*pi/180}</param>
+                </command_interface>
+
+                <state_interface name="position"/>
+                <state_interface name="velocity"/>
+                <state_interface name="effort"/>
+            </joint>
+
+            <joint name="${prefix}axis5_bend">
+                <command_interface name="position">
+                    <param name="min">${-180*pi/180}</param>
+                    <param name="max">${180*pi/180}</param>
+                </command_interface>
+
+                <state_interface name="position"/>
+                <state_interface name="velocity"/>
+                <state_interface name="effort"/>
+            </joint>
+
+            <joint name="${prefix}axis6_turn">
+                <command_interface name="position">
+                    <param name="min">${-270*pi/180}</param>
+                    <param name="max">${270*pi/180}</param>
+                </command_interface>
+
+                <state_interface name="position"/>
+                <state_interface name="velocity"/>
+                <state_interface name="effort"/>
+            </joint>
+        </ros2_control>
+    </xacro:macro>
+</robot>

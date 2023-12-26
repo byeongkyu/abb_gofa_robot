@@ -1,27 +1,27 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-    <xacro:macro name="insert_abb_gofa_crb15000" params="prefix parent *origin">
+    <xacro:macro name="insert_robot" params="prefix parent *origin">
         <!-- BASE LINK -->
         <link name="${prefix}base">
             <visual>
                 <origin xyz="0 0 0" rpy="0 0 0"/>
                 <geometry>
-                    <mesh filename="file://$(find abb_gofa_description)/meshes/base.dae" scale="1 1 1"/>
+                    <mesh filename="package:/abb_gofa_description/meshes/visual/base.dae" scale="1 1 1"/>
                 </geometry>
             </visual>
 
             <collision>
                 <origin xyz="0 0 0" rpy="0 0 0"/>
                 <geometry>
-                    <mesh filename="file://$(find abb_gofa_description)/meshes/base.dae" scale="1 1 1"/>
+                    <mesh filename="package:/abb_gofa_description/meshes/collision/base.stl" scale="1 1 1"/>
                 </geometry>
             </collision>
 
             <inertial>
-                <origin xyz="0 0 0" rpy="0 0 0"/>
-                <mass value="1.0"/>
-                <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+                <origin xyz="-0.007 -0.001 0.079" rpy="0 0 0"/>
+                <mass value="4.905698"/>
+                <inertia ixx="0.021755" ixy="-0.000332" ixz="-0.000992" iyy="0.025038" iyz="-0.000087" izz="0.020455"/>
             </inertial>
         </link>
 
@@ -37,25 +37,25 @@
             <visual>
                 <origin xyz="0 0 0" rpy="0 0 0"/>
                 <geometry>
-                    <mesh filename="file://$(find abb_gofa_description)/meshes/link1.dae" scale="1 1 1"/>
+                    <mesh filename="package:/abb_gofa_description/meshes/visual/link1.dae" scale="1 1 1"/>
                 </geometry>
             </visual>
 
             <collision>
                 <origin xyz="0 0 0" rpy="0 0 0"/>
                 <geometry>
-                    <mesh filename="file://$(find abb_gofa_description)/meshes/link1.dae" scale="1 1 1"/>
+                    <mesh filename="package:/abb_gofa_description/meshes/collision/link1.stl" scale="1 1 1"/>
                 </geometry>
             </collision>
 
             <inertial>
-                <origin xyz="0 0 0" rpy="0 0 0"/>
-                <mass value="1.0"/>
-                <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+                <origin xyz="0 0.011 0.067" rpy="0 0 0"/>
+                <mass value="3.176119"/>
+                <inertia ixx="0.013466" ixy="0.0" ixz="-0.000001" iyy="0.007766" iyz="-0.000182" izz="0.012863"/>
             </inertial>
         </link>
 
-        <joint name="${prefix}rotation_joint" type="revolute">
+        <joint name="${prefix}axis1_rotation" type="revolute">
             <parent link="${prefix}base"/>
             <child link="${prefix}link1"/>
             <origin xyz="0 0 0.1855" rpy="0 0 0"/>
@@ -69,25 +69,25 @@
             <visual>
                 <origin xyz="0 0 0" rpy="0 0 0"/>
                 <geometry>
-                    <mesh filename="file://$(find abb_gofa_description)/meshes/link2.dae" scale="1 1 1"/>
+                    <mesh filename="package:/abb_gofa_description/meshes/visual/link2.dae" scale="1 1 1"/>
                 </geometry>
             </visual>
 
             <collision>
                 <origin xyz="0 0 0" rpy="0 0 0"/>
                 <geometry>
-                    <mesh filename="file://$(find abb_gofa_description)/meshes/link2.dae" scale="1 1 1"/>
+                    <mesh filename="package:/abb_gofa_description/meshes/collision/link2.stl" scale="1 1 1"/>
                 </geometry>
             </collision>
 
             <inertial>
-                <origin xyz="0 0 0" rpy="0 0 0"/>
-                <mass value="1.0"/>
-                <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+                <origin xyz="0 -0.041 0.222" rpy="0 0 0"/>
+                <mass value="6.339935"/>
+                <inertia ixx="0.160583" ixy="-0.000005" ixz="0.000022" iyy="0.165212" iyz="0.000002" izz="0.011745"/>
             </inertial>
         </link>
 
-        <joint name="${prefix}arm1_joint" type="revolute">
+        <joint name="${prefix}axis2_arm" type="revolute">
             <parent link="${prefix}link1"/>
             <child link="${prefix}link2"/>
             <origin xyz="0 -0.085 0.0765" rpy="0 0 0"/>
@@ -101,30 +101,30 @@
             <visual>
                 <origin xyz="0 0 0" rpy="0 0 0"/>
                 <geometry>
-                    <mesh filename="file://$(find abb_gofa_description)/meshes/link3.dae" scale="1 1 1"/>
+                    <mesh filename="package:/abb_gofa_description/meshes/visual/link3.dae" scale="1 1 1"/>
                 </geometry>
             </visual>
 
             <collision>
                 <origin xyz="0 0 0" rpy="0 0 0"/>
                 <geometry>
-                    <mesh filename="file://$(find abb_gofa_description)/meshes/link3.dae" scale="1 1 1"/>
+                    <mesh filename="package:/abb_gofa_description/meshes/collision/link3.stl" scale="1 1 1"/>
                 </geometry>
             </collision>
 
             <inertial>
-                <origin xyz="0 0 0" rpy="0 0 0"/>
-                <mass value="1.0"/>
-                <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+                <origin xyz="0.017 0.094 0.030" rpy="0 0 0"/>
+                <mass value="4.314157"/>
+                <inertia ixx="0.022588" ixy="0.000348" ixz="-0.003893" iyy="0.017873" iyz="0.000635" izz="0.017803"/>
             </inertial>
         </link>
 
-        <joint name="${prefix}arm2_joint" type="revolute">
+        <joint name="${prefix}axis3_arm" type="revolute">
             <parent link="${prefix}link2"/>
             <child link="${prefix}link3"/>
             <origin xyz="0 0 0.444" rpy="0 0 0"/>
             <axis xyz="0 1 0"/>
-            <limit lower="${-180*pi/180}" upper="${180*pi/180}" velocity="${125*pi/180}" effort="1000"/>
+            <limit lower="${-225*pi/180}" upper="${85*pi/180}" velocity="${140*pi/180}" effort="1000"/>
         </joint>
 
 
@@ -133,30 +133,30 @@
             <visual>
                 <origin xyz="0 0 0" rpy="0 0 0"/>
                 <geometry>
-                    <mesh filename="file://$(find abb_gofa_description)/meshes/link4.dae" scale="1 1 1"/>
+                    <mesh filename="package:/abb_gofa_description/meshes/visual/link4.dae" scale="1 1 1"/>
                 </geometry>
             </visual>
 
             <collision>
                 <origin xyz="0 0 0" rpy="0 0 0"/>
                 <geometry>
-                    <mesh filename="file://$(find abb_gofa_description)/meshes/link4.dae" scale="1 1 1"/>
+                    <mesh filename="package:/abb_gofa_description/meshes/collision/link4.stl" scale="1 1 1"/>
                 </geometry>
             </collision>
 
             <inertial>
-                <origin xyz="0 0 0" rpy="0 0 0"/>
-                <mass value="1.0"/>
-                <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+                <origin xyz="0 0.042 0.183" rpy="0 0 0"/>
+                <mass value="5.023341"/>
+                <inertia ixx="0.063463" ixy="0.000005" ixz="0.000006" iyy="0.058260" iyz="-0.011954" izz="0.013008"/>
             </inertial>
         </link>
 
-        <joint name="${prefix}wrist_joint" type="revolute">
+        <joint name="${prefix}axis4_wrist" type="revolute">
             <parent link="${prefix}link3"/>
             <child link="${prefix}link4"/>
             <origin xyz="0.096 0.085 0.110" rpy="0 ${pi/2} 0"/>
             <axis xyz="0 0 1"/>
-            <limit lower="${-180*pi/180}" upper="${180*pi/180}" velocity="${125*pi/180}" effort="1000"/>
+            <limit lower="${-180*pi/180}" upper="${180*pi/180}" velocity="${200*pi/180}" effort="1000"/>
         </joint>
 
 
@@ -165,30 +165,30 @@
             <visual>
                 <origin xyz="0 0 0" rpy="0 0 0"/>
                 <geometry>
-                    <mesh filename="file://$(find abb_gofa_description)/meshes/link5.dae" scale="1 1 1"/>
+                    <mesh filename="package:/abb_gofa_description/meshes/visual/link5.dae" scale="1 1 1"/>
                 </geometry>
             </visual>
 
             <collision>
                 <origin xyz="0 0 0" rpy="0 0 0"/>
                 <geometry>
-                    <mesh filename="file://$(find abb_gofa_description)/meshes/link5.dae" scale="1 1 1"/>
+                    <mesh filename="package:/abb_gofa_description/meshes/collision/link5.stl" scale="1 1 1"/>
                 </geometry>
             </collision>
 
             <inertial>
-                <origin xyz="0 0 0" rpy="0 0 0"/>
-                <mass value="1.0"/>
-                <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+                <origin xyz="-0.042 -0.079 -0.018" rpy="0 0 0"/>
+                <mass value="4.027630"/>
+                <inertia ixx="0.015907" ixy="0.000502" ixz="-0.001510" iyy="0.017628" iyz="0.000200" izz="0.014957"/>
             </inertial>
         </link>
 
-        <joint name="${prefix}bend_joint" type="revolute">
+        <joint name="${prefix}axis5_bend" type="revolute">
             <parent link="${prefix}link4"/>
             <child link="${prefix}link5"/>
             <origin xyz="0 0.0755 0.373" rpy="0 0 0"/>
             <axis xyz="0 1 0"/>
-            <limit lower="${-180*pi/180}" upper="${180*pi/180}" velocity="${125*pi/180}" effort="1000"/>
+            <limit lower="${-180*pi/180}" upper="${180*pi/180}" velocity="${200*pi/180}" effort="1000"/>
         </joint>
 
 
@@ -197,32 +197,31 @@
             <visual>
                 <origin xyz="0 0 0" rpy="0 0 0"/>
                 <geometry>
-                    <mesh filename="file://$(find abb_gofa_description)/meshes/link6.dae" scale="1 1 1"/>
+                    <mesh filename="package:/abb_gofa_description/meshes/visual/link6.dae" scale="1 1 1"/>
                 </geometry>
             </visual>
 
             <collision>
                 <origin xyz="0 0 0" rpy="0 0 0"/>
                 <geometry>
-                    <mesh filename="file://$(find abb_gofa_description)/meshes/link6.dae" scale="1 1 1"/>
+                    <mesh filename="package:/abb_gofa_description/meshes/collision/link6.stl" scale="1 1 1"/>
                 </geometry>
             </collision>
 
             <inertial>
-                <origin xyz="0 0 0" rpy="0 0 0"/>
-                <mass value="1.0"/>
-                <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+                <origin xyz="0 0 0.014" rpy="0 0 0"/>
+                <mass value="0.213120"/>
+                <inertia ixx="0.000127" ixy="0.000001" ixz="0.0" iyy="0.000127" iyz="0.0" izz="0.000219"/>
             </inertial>
         </link>
 
-        <joint name="${prefix}turn_joint" type="revolute">
+        <joint name="${prefix}axis6_turn" type="revolute">
             <parent link="${prefix}link5"/>
             <child link="${prefix}link6"/>
             <origin xyz="-0.080 -0.0745 0.068" rpy="0 0 0"/>
             <axis xyz="0 0 1"/>
-            <limit lower="${-180*pi/180}" upper="${180*pi/180}" velocity="${125*pi/180}" effort="1000"/>
+            <limit lower="${-270*pi/180}" upper="${270*pi/180}" velocity="${200*pi/180}" effort="1000"/>
         </joint>
-
 
         <!-- TOOL EEF -->
         <link name="${prefix}tool_eef"/>
